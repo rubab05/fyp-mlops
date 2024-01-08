@@ -22,20 +22,20 @@ def load_embeddings(store_name, path):
 
 
 # db_instructEmbedd = FAISS.from_documents(docs, instructor_embeddings)
-db_i = load_embeddings(store_name='faiss_Embeddings', path=embedding_store_path)
+#db_i = load_embeddings(store_name='faiss_Embeddings', path=embedding_store_path)
 
-retrievers = db_i.as_retriever(
-    search_type="similarity_score_threshold",
-    search_kwargs={"score_threshold": .25}
-)
+# retrievers = db_i.as_retriever(
+#     search_type="similarity_score_threshold",
+#     search_kwargs={"score_threshold": .25}
+# )
 
-input_text = """Software Engineer"""
-docs = retrievers.get_relevant_documents(input_text)
+# input_text = """Software Engineer"""
+# docs = retrievers.get_relevant_documents(input_text)
 
-sources = []  # Corrected variable name
-for doc in docs:
-    source = doc.metadata.get('source')
-    if source:
-        sources.append(source)  # Append source to the list
+# sources = []  # Corrected variable name
+# for doc in docs:
+#     source = doc.metadata.get('source')
+#     if source:
+#         sources.append(source)  # Append source to the list
 
 # Continue with the rest of your script as needed
