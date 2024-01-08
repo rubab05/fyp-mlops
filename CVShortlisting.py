@@ -22,7 +22,9 @@ def load_embeddings(store_name, path):
 
 
 # db_instructEmbedd = FAISS.from_documents(docs, instructor_embeddings)
-#db_i = load_embeddings(store_name='faiss_Embeddings', path=embedding_store_path)
+# db_i = load_embeddings(store_name='faiss_Embeddings',
+# path=embedding_store_path)
+
 
 # retrievers = db_i.as_retriever(
 #     search_type="similarity_score_threshold",
