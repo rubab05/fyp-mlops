@@ -3,7 +3,7 @@ name: TestCases
 on:
   push:
     branches:
-      - test
+      - main
 
 jobs:
   build:
