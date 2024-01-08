@@ -1,7 +1,7 @@
 name: TestCases
 
 on:
-  pull_request:
+  push:
     branches:
       - test
 
