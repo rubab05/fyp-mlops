@@ -4,6 +4,5 @@ flake8
 scikit-learn
 h5py
 numpy
-mlflow
 langchain
 pypdf
