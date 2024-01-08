@@ -4,7 +4,7 @@ from langchain.document_loaders import PyPDFDirectoryLoader
 from langchain.embeddings import HuggingFaceEmbeddings
 
 path = os.getcwd()
-pdf_folder_path = 'C:\\Users\\tahar\\Downloads\\CV Shortlisting\\CV Data'
+pdf_folder_path = 'cv-data/'
 print(os.listdir(pdf_folder_path))
 
 loader = PyPDFDirectoryLoader(pdf_folder_path)
@@ -12,7 +12,7 @@ docs = loader.load()
 
 embeddings = HuggingFaceEmbeddings()
 
-embedding_store_path = 'C:/Users/tahar/Downloads/CV Shortlisting'
+embedding_store_path = 'faiss_Embeddings.pkl'
 
 
 def load_embeddings(store_name, path):
@@ -22,7 +22,7 @@ def load_embeddings(store_name, path):
 
 
 # db_instructEmbedd = FAISS.from_documents(docs, instructor_embeddings)
-db_i = load_embeddings(store_name='Embeddings', path=embedding_store_path)
+db_i = load_embeddings(store_name='faiss_Embeddings', path=embedding_store_path)
 
 retrievers = db_i.as_retriever(
     search_type="similarity_score_threshold",
