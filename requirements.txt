@@ -6,3 +6,4 @@ h5py
 numpy
 langchain
 pypdf
+sentence-transformers
