@@ -8,4 +8,4 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-COPY CVShortlisting.py .
+COPY CVShortlisting.py .
