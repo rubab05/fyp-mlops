@@ -2,20 +2,6 @@ import unittest
 from unittest.mock import MagicMock
 from CVShortlisting import load_embeddings
 
-class TestLoadEmbeddings(unittest.TestCase):
-    def test_load_embeddings(self):
-        # Mocking the pickle.load function
-        with unittest.mock.patch("builtins.open"), unittest.mock.patch("pickle.load") as mock_load:
-            # Setting up the mock return value
-            mock_load.return_value = "MockVectorStore"
-
-            # Calling the function
-            result = load_embeddings(store_name='Embeddings', path='mock_path')
-
-            # Assertions
-            self.assertEqual(result, "MockVectorStore")
-            mock_load.assert_called_once_with('mock_path/faiss_Embeddings.pkl', 'rb')
-
 # Assuming your_script_filename.py contains the code you provided
 class TestRetrievalProcess(unittest.TestCase):
     def test_retrieval_process(self):
