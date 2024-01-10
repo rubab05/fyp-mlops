@@ -8,4 +8,4 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-COPY pose.py .
+COPY CVShortlisting.py .
