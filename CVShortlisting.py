@@ -12,16 +12,16 @@ docs = loader.load()
 
 embeddings = HuggingFaceEmbeddings()
 
-embedding_store_path = 'faiss_Embeddings.pkl'
+#embedding_store_path = 'faiss_Embeddings.pkl'
 
 
-def load_embeddings(store_name, path):
-    with open(f"{path}/faiss_{store_name}.pkl", "rb") as f:
-        VectorStore = pickle.load(f)
-    return VectorStore
+# def load_embeddings(store_name, path):
+#     with open(f"{path}/faiss_{store_name}.pkl", "rb") as f:
+#         VectorStore = pickle.load(f)
+#     return VectorStore
 
 
-# db_instructEmbedd = FAISS.from_documents(docs, instructor_embeddings)
+#db_instructEmbedd = FAISS.from_documents(docs, embeddings)
 # db_i = load_embeddings(store_name='faiss_Embeddings',
 # path=embedding_store_path)
 
