@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Define your Docker image name and tag
-                    def dockerImage = 'rubab05/r1'
+                    def dockerImage = 'rubab05/p1'
                     def dockerTag = 'latest'
 
                     // Build the Docker image
@@ -21,13 +21,13 @@ pipeline {
 
                     // Log in to Docker Hub (make sure to set DOCKER_HUB_USERNAME and DOCKER_HUB_PASSWORD as Jenkins credentials)
                     //withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials-id', usernameVariable: 'DOCKER_HUB_USERNAME', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
-                       // bat "docker login -u rubab05 -p Hakunamatata12345"
+                        bat "docker login -u rubab05 -p Hakunamatata12345"
                     //}
-                    echo 'in push'
+
                     // Push the Docker image to Docker Hub
                     // bat "docker tag local-image:tagname new-repo:tagname"
                     // bat "docker push new-repo:tagname"
-                    // bat "docker push ${dockerImage}:${dockerTag}"
+                    bat "docker push ${dockerImage}:${dockerTag}"
                 }
             }
         }
