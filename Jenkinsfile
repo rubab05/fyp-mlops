@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Define your Docker image name and tag
-                    def dockerImage = 'rubab05/p1'
+                    def dockerImage = 'rubab05/r1'
                     def dockerTag = 'latest'
 
                     // Build the Docker image
